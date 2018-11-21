@@ -1,17 +1,19 @@
 $(document).ready(function() {
 
-    $('.navShowHide').click(function(){
+    $(".navShowHide").on("click", function() {
         
-        if ($('#mainSectionContainer').hasClass('mainCon'))
-        {
-            $('#sideNavContainer').hide();
+        var main = $("#mainSectionContainer");
+        var nav = $("#sideNavContainer");
+
+        if(main.hasClass("leftPadding")) {
+            nav.hide();
         }
-        else
-        {
-            $('#sideNavContainer').show();   
+        else {
+            nav.show();
         }
-       
-        $('#mainSectionContainer').toggleClass('mainCon');
+
+        main.toggleClass("leftPadding");
 
     });
+
 });
